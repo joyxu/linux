@@ -63,6 +63,16 @@ config BRCMSTB_GISB_ARB
 	  arbiter. This driver provides timeout and target abort error handling
 	  and internal bus master decoding.
 
+config HISILICON_HIP06_LPC
+	bool "Workaround for nonstandard ISA I/O space on Hisilicon Hip06 SoC"
+	depends on ARCH_HISI || CONPILE_TEST
+	select ARM64_INDIRECT_PIO
+	help
+	  This driver support for some legacy driver that use the ISA I/O ports,
+	  in arm64, there is no real ISA I/O ports, so we hook the drivers to in/out
+	  func in arch/arm64/include/asm/io.h, when upper layer drivers call in/out
+	  func to access I/O ports, the lpc driver is called indeed.
+
 config IMX_WEIM
 	bool "Freescale EIM DRIVER"
 	depends on ARCH_MXC
