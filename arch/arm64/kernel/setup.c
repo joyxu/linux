@@ -66,6 +66,11 @@
 
 phys_addr_t __fdt_pointer __initdata;
 
+#if defined(CONFIG_ARM64_INDIRECT_PIO)
+arm64_isa_io arm64_isa_pio;
+EXPORT_SYMBOL_GPL(arm64_isa_pio);
+#endif
+
 /*
  * Standard memory resources
  */

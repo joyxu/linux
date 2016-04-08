@@ -118,6 +118,9 @@ config ILLEGAL_POINTER_VALUE
 	hex
 	default 0xdead000000000000
 
+config ARM64_INDIRECT_PIO
+	bool
+
 config LOCKDEP_SUPPORT
 	def_bool y
 
