@@ -234,6 +234,14 @@ config SERIAL_8250_HUB6
 	  To compile this driver as a module, choose M here: the module
 	  will be called 8250_hub6.
 
+config SERIAL_8250_HIP06
+	tristate "Support Hisilicon Hip06 UART"
+	depends on SERIAL_8250 != n && HISILICON_HIP06_LPC
+	help
+	  Say Y here if you have a hip06 board.
+
+	  To compile this driver as a module, choose M here: the module
+	  will be called 8250_hip06.
 #
 # Misc. options/drivers.
 #
