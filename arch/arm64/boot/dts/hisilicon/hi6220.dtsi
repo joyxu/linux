@@ -678,7 +678,7 @@
 			status = "ok";
 		};
 
-		spi_0: spi@f7106000 {
+		spi0: spi@f7106000 {
 			compatible = "arm,pl022", "arm,primecell";
 			reg = <0x0 0xf7106000 0x0 0x1000>;
 			interrupts = <0 50 4>;
@@ -690,7 +690,7 @@
 			pinctrl-0 = <&spi0_pmx_func &spi0_cfg_func>;
 			num-cs = <1>;
 			cs-gpios = <&gpio6 2 0>;
-			status = "ok";
+			status = "disabled";
 		};
 
 		i2c0: i2c@f7100000 {
