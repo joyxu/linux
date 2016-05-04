@@ -32,3 +32,15 @@
 &usb_ehci {
 	status = "ok";
 };
+
+&sas0 {
+	status = "okay";
+};
+
+&sas1 {
+	status = "okay";
+};
+
+&sas2 {
+	status = "okay";
+};
